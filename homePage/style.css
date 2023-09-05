@@ -1,0 +1,73 @@
+
+body::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/c1/07/4a/c1074acc9f0d481a8c2ebcfe2a70367f.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: .8;
+}
+.containerBlock{
+    width: 80%;
+    display: block;
+    margin: auto;
+    background-color: rgba(39, 39, 40, 0.785);
+    color: white;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 5px;
+}
+.banking{
+    border: 3px solid rgb(197, 194, 194);
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.425);
+    margin-top: 10px;
+}
+input{
+    letter-spacing: 1px;
+}
+
+
+.button-21 {
+  align-items: center;
+  appearance: none;
+  background-color: #3EB2FD;
+  background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: CircularStd,sans-serif;
+  font-size: 1rem;
+  height: auto;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color .2s,background-position .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.button-21:active,
+.button-21:focus {
+  outline: none;
+}
+
+.button-21:hover {
+  background-position: -20px -20px;
+}
