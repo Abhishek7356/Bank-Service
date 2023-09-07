@@ -3,10 +3,11 @@ body::before {
     position: absolute;
     z-index: -1;
     width: 100%;
-    height: 100vh;
+    height: 700px;
     background-image: url('https://i.pinimg.com/originals/c1/07/4a/c1074acc9f0d481a8c2ebcfe2a70367f.jpg');
     background-size: cover;
     background-attachment: fixed;
+    background-position: bottom;
     opacity: .8;
 }
 
@@ -32,6 +33,21 @@ body::before {
 
 input {
     letter-spacing: 1px;
+}
+
+.balance{
+    width: 100%;
+    background-color: #4f58fde6;
+    padding: 20px;
+    border-radius: 10px;
+}
+.serviceBox{
+    position: relative;
+}
+.rupee{
+    position: absolute;
+    left: 9px;
+    top: 7px;
 }
 
 

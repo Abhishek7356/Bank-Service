@@ -7,6 +7,7 @@
     border: 1px solid gray;
     flex-direction: column;
     padding: 40px;
+    margin-bottom: 40px;
     gap: 30px;
 }
 .register img{

@@ -8,6 +8,7 @@
     flex-direction: column;
     padding: 40px;
     gap: 30px;
+    margin-bottom: 40px;
 }
 .register img{
     width: 60%;

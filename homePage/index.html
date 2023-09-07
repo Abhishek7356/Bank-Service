@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <script src="../script.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -19,17 +19,17 @@
     <link href='https://fonts.googleapis.com/css?family=Alexandria' rel='stylesheet'>
 
     <style>
-        body{
+        body {
             font-family: 'Alexandria';
         }
     </style>
 </head>
 
-<body>
+<body onload="pageLoad()" onunload="pageUnload()">
     <header>
-        <div class="row">
+        <div class="row bg-light">
             <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg bg-primary">
+                <nav class="navbar navbar-expand-lg ">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">Online Banking Service</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -48,6 +48,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">Pricing</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a onclick="clearAll()" class="text-center nav-link bg-info rounded-pill ms-3">Log Out</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -59,40 +62,60 @@
         <div class="containerBlock">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center">Welcome user</h2>
+                    <h2 class="text-center" id="Username"></h2>
                     <h4 class="text-center">Online Banking Services</h4>
                 </div>
             </div>
         </div>
     </section>
     <section>
-        <div class="container  mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 text-center mt-4 text-light">
+                    <div class="balance">
+                        <h4>Your Bank balance</h4>
+                        <h4 id="amount">&#8377; 0</h4>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container  mt-3">
             <div class="row">
                 <div class="col-md-6">
                     <div class="banking text-center">
                         <h3>Deposit</h3>
                         <div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control rounded-pill" id="" placeholder="Enter your Name">
+                            <div class="mb-3 serviceBox"> 
+                                <h5 class="rupee">&#8377;</h5>
+                                <input id="deposite" type="text" class="form-control px-4 rounded-pill" 
+                                    placeholder="Enter Amount">
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="form-control rounded-pill" placeholder="Enter Your Password " id="">
+                                <input id="transPassword" type="password" class="px-4 form-control rounded-pill"
+                                    placeholder="Enter Your Password " >
                             </div>
-                            <button type="submit" class="button-21 mt-3">Deposit</button>
+                            <button onclick="deposite()" type="submit" id="deposite" class="button-21 mt-3">Deposit</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mb-2">
                     <div class="banking text-center">
                         <h3>Withdraw</h3>
                         <div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control rounded-pill" id="" placeholder="Enter your Name">
+                            <div class="mb-3 serviceBox">
+                                <h5 class="rupee">&#8377;</h5>
+                                <input id="withdraw" type="text" class="px-4 form-control rounded-pill" 
+                                    placeholder="Enter Amount">
                             </div>
                             <div class="mb-3">
-                                <input type="password" class="form-control rounded-pill" placeholder="Enter Your Password " id="">
+                                <input id="wPassword" type="password" class="px-4 form-control rounded-pill"
+                                    placeholder="Enter Your Password " >
                             </div>
-                            <button type="submit" class="button-21 mt-3">Withdraw</button>
+                            <button type="submit" onclick="withdraw()" class="button-21 mt-3">Withdraw</button>
                         </div>
                     </div>
                 </div>
