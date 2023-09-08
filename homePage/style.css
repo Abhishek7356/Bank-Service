@@ -3,7 +3,7 @@ body::before {
     position: absolute;
     z-index: -1;
     width: 100%;
-    height: 700px;
+    height: 100vh;
     background-image: url('https://i.pinimg.com/originals/c1/07/4a/c1074acc9f0d481a8c2ebcfe2a70367f.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -93,7 +93,7 @@ input {
 
 @media screen and (max-width: 600px) {
     body::before {
-        height: 62em;
+        height: 1100px;
     }
 
 }
